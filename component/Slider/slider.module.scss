@@ -1,0 +1,33 @@
+.container{
+    width: 100%;
+    height: 100%; 
+    position: relative;
+    max-width:1000px;
+    .swiperWrapper{
+        overflow-x: hidden;
+         display: flex;
+        align-items: center;
+        margin: 3rem auto 0 0rem;
+        column-gap: 3rem;
+        .imageWrapper{
+            border-radius: 30px;
+            img{
+                border-radius: 30px;
+                display: block;
+               
+            }
+        }
+    }    
+    .leftArrow{
+        position: absolute;
+        top:50%;
+        left: -10%;
+        font-size: 2rem;
+    }
+    .rightArrow{
+        position: absolute;
+        top:50%;
+        right: -10%;
+        font-size: 2rem;
+    }
+}

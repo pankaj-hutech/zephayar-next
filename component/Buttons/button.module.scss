@@ -1,0 +1,22 @@
+.container{
+    button{
+       padding: 0.8rem 2.2rem;
+       margin: 1rem 1rem;
+       border-radius: .4rem;
+       min-width: 150px;
+       font-size: 1rem;
+       font-weight: 600;
+        cursor: pointer;
+    }
+
+    .transparent{
+        background: transparent;
+        outline: none;
+        color: #fff;
+        border: 1px solid;
+    }
+
+    .filled{
+        color:black
+    }
+}
