@@ -1,0 +1,55 @@
+.footer {
+    padding-top: 8px;
+    display: grid;
+    grid-template-columns: 330px 300px 300px 200px;
+    background-color: rgb(255, 255, 255);
+}
+
+.card {
+    display: flex;
+    flex-direction: row;
+}
+
+.new {
+    /* font-size: small;
+    font-weight: 600; */
+    cursor: pointer;
+    padding: 0 2rem;
+    padding-top: 5px;
+}
+
+.colour {
+    color: red;
+}
+
+.one {
+    align-self: start;
+}
+
+.name {
+    text-align: center;
+    background-color: azure;
+}
+
+.clr {
+    background-color: azure;
+}
+
+@media only screen and (max-width: 480px) {
+    .footer {
+        padding: 0 2rem;
+        /* display: flex;
+        flex-direction: row;
+        flex-wrap: wrap; */
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.name1 {
+    text-align: center;
+    background-color: rgb(101, 44, 193);
+    height: 90px;
+    color: #fafafa;
+    padding-top: 10px;
+}
