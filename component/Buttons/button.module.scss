@@ -4,19 +4,8 @@
        margin: 1rem 1rem;
        border-radius: .4rem;
        min-width: 150px;
-       font-size: 1rem;
+       font-size: .9rem;
        font-weight: 600;
-        cursor: pointer;
-    }
-
-    .transparent{
-        background: transparent;
-        outline: none;
-        color: #fff;
-        border: 1px solid;
-    }
-
-    .filled{
-        color:black
+       cursor: pointer;
     }
 }

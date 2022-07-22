@@ -1,24 +1,23 @@
-import React ,{ useState } from "react";
+import React ,{ useEffect, useState } from "react";
 import styles from "./index.module.scss";
 import Image from "next/image";
 import { placeHolder } from "../../placeholer";
 import Link from 'next/link';
 import { MdExpandMore } from "react-icons/md";
 import Buttons from "../Buttons/Buttons";
-
+import { MaterialUISwitch } from "./themeSwitch";
+import FormControlLabel from "@mui/material/FormControlLabel";
 
 const Header = () => {
    
-
     const getHeaderData = placeHolder.filter((com) => com.componentName === "header");
     const {componentName , componentDisplayName , data  } = placeHolder[0];
-
+    
     return (
         <div className={styles.container}>
             <div>
                 <header className={styles.header}>
                         <>
-                        
                             <>
                                 {componentName === "header" &&
                                     <div className={styles.container}>
@@ -39,7 +38,7 @@ const Header = () => {
                                                         {data?.headerNameItem.map((elem, idx) => (
                                                             <li key={idx}>
                                                                 <Link href={elem.link}>
-                                                                    {elem.nestItem.length >1 ? 
+                                                                    {elem.nestItem.length > 1 ? 
                                                                         <span>
                                                                             <a>{elem.title}</a>
                                                                             <MdExpandMore />
@@ -66,12 +65,12 @@ const Header = () => {
                                                 </>
                                                 }
                                                 {data.buttons && <Buttons data={data.buttons} />}
+                                                {<FormControlLabel  control={<MaterialUISwitch />}  />}
                                             </nav>
                                         }
                                 </div>
                             }
                             </>
-                        
                         </>
                 </header>
             </div>

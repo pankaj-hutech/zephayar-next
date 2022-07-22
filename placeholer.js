@@ -120,6 +120,12 @@ export const placeHolder = [
             },
             {
                 id: 4,
+                image: P1,
+                title: "Any Text2" ,
+                subTitle : "image-1",
+            },
+            {
+                id: 5,
                 image: P4,
                 title: "Any Text 1" ,
                 subTitle : "image-1",

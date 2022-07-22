@@ -8,10 +8,11 @@
         display: flex;
         justify-content: space-between;
         align-items: baseline;
-        max-width: 95%;
+        // max-width: 95%;
         margin: auto;
         .logo{
             cursor: pointer;
+            margin-left: 1rem;
             outline: none;
             h2{
                 font-size: 2rem;

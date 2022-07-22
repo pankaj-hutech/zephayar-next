@@ -5,6 +5,7 @@ import { placeHolder } from "../placeholer";
 import Slider from '../component/Slider/Slider';
 
 
+
 export default function Home() {
 
   const sliderData = placeHolder[1]; 
@@ -21,11 +22,12 @@ export default function Home() {
           display: "flex",
           alignItems: 'center',
           justifyContent: "center",
-          width: "100%", maxWidth: "70%",
-          margin: "auto"
+          width: "100%",
+          margin: "auto",
+          maxWidth: "80%"
         }
       }>
-        <Slider sliderData={sliderData} />
+      {<Slider sliderData={sliderData} />}
       </div>
     </div>
   )
