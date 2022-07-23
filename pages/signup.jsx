@@ -30,7 +30,6 @@ function Signup() {
 
     } = useInput((value) => value.length >= 8);
 
-    // console.log(emailValue);
 
     let inputDetails = [
         {
