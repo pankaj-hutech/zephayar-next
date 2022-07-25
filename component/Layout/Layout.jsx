@@ -4,14 +4,23 @@ import style from "./Laout.module.scss";
 import { lightTheme, darkTheme } from "../../styles/ThemeConfig";
 import { GlobalStyles } from "../../styles/GloableStyle";
 import { ThemeProvider } from "styled-components";
-
+import { createTheme } from '@mui/material/styles';
 
 const Layout = (props) => {
   const [themeColor, setThemeColor] = useState("light");
 
   const themeToggler = () => {
       setThemeColor((prev) => prev === "light" ? "dark" : "light");
-  }
+    }
+    
+    const theme = createTheme({
+    palette: {
+        secondary: {
+        main: '#d50000'
+        }
+    }
+    });
+    
     return (
         <ThemeProvider theme={themeColor === "dark" ? lightTheme : darkTheme}>
             <GlobalStyles />

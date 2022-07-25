@@ -10,11 +10,16 @@ import FormControlLabel from "@mui/material/FormControlLabel";
 
 const Header = ({ themeToggler }) => {
 
-    const { componentName, componentDisplayName, data } = placeHolder[0];
+    let { componentName, componentDisplayName, data } = placeHolder[0];
     
+    useEffect(() => {
+         componentName, componentDisplayName, data
+    }, []);
+
+
     return (
         <div className={styles.container}>
-            <header className={styles.header}>
+            <header className={styles.header} style={{backgroundColor : data.bgColor , color: data.textColor || "red"}}>
                 {componentName === "header" &&
                     <div className={styles.container}>
                         {data.logo.image &&
@@ -58,7 +63,21 @@ const Header = ({ themeToggler }) => {
                                         ))}
                                     </ul>
                                 }
-                                {data.buttons && <Buttons data={data.buttons} />}
+                                {data.buttons &&
+                                    data.buttons.map((btn => (
+                                        <Buttons
+                                            type={btn?.type}
+                                            title={btn?.title}
+                                            color={btn?.color}
+                                            fullWidth={btn?.fullWidth}
+                                            sm={btn?.sm}
+                                            xs={btn?.xs}
+                                            variant={btn?.variant}
+                                            sx={btn?.sx}
+                                            link={btn?.link}
+                                        />
+                                    ))    
+                                )}
                                 <FormControlLabel onClick={() => themeToggler()} control={<MaterialUISwitch />} />
                             </nav>
                         }

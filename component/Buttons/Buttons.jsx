@@ -1,30 +1,23 @@
-import Link from "next/link";
-import style from "./button.module.scss";
-import { useRouter } from 'next/router';
-import Button from '@mui/material/Button';
+import {Button , Grid } from '@mui/material';
+import Link from 'next/link'
 
-const Buttons = ({ data }) => {
+
+const Buttons = ({ type, variant, color, fullWidth, title, sm, xs , sx , link}) => {
     
-    const router = useRouter();
-
-    const handleClick = (e) => {
-        router.push(e)
-    }
-
     return (
-        <div className={style.container}>
-            {data.map((btn, idx) => (
-                <Link href={btn.link}>
+        <Grid item sm={sm || ""} xs={xs || ""} sx={sx}  >
+            <Link href={link || ""}>
                 <Button
-                    variant={btn.style == "filled" ? "contained" : "outlined"}   
-                    color={btn.style == "filled" ? "primary" : "secondary"}
+                    variant={variant}   
+                    color={color}
+                    type={type || "button"}
+                    fullWidth={fullWidth || null}    
                 >
-                    {btn.title}
-                    </Button>
-                </Link>
-            ))}
-        </div>
+                    {title || ""}
+                </Button>
+            </Link>
+        </Grid>
     );
 }
 
-export default Buttons;
+export default (Buttons);

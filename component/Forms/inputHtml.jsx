@@ -22,3 +22,14 @@ const InputHtml = ({inputDetails}) => {
 }
 
 export default InputHtml;
+
+
+//  <TextField
+//                         id="standard-basic"
+//                         label={field.lable}
+//                         variant="standard"
+//                         value={field.inputVal}
+//                         onBlur={field.bulrHandler}
+//                         placeholder={field.placeholder}
+//                         onChange={(e) => field.onChange(e.target.value)}
+//                     />  

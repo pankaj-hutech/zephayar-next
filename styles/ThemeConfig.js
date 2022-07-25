@@ -4,11 +4,11 @@ export const lightTheme = {
     toggleBorder: '#FFF',
     background: 'red',
     margin: "auto"
-}
+};
 export const darkTheme = {
-    body: '#f5f5f5',
+    body: '#fff',
     text: '#000',
     toggleBorder: '#6B8096',
     background: 'red',
     align: "center"
-}
+};

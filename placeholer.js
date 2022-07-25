@@ -14,16 +14,32 @@ export const placeHolder = [
             subTitle: "company",
             logoName: "Zaphayar",
             description: "Service Provider",
+            bgColor: "#4b1584",
+            textColor: "#FFF",
             buttons: [
                 {
-                    title: "Login",
+                    title: "LogIn",
                     link: "/login",
-                    style: "transparent",
+                    type: "button",
+                    color: "primary",
+                    variant: "contained",
+                    sm: 6,
+                    xs: 2,
+                    sx: {
+                        mx: 1,
+                    }
                 },
                 {
                     title: "SignUp",
                     link: "/signup",
-                    style: "filled", 
+                    variant:"contained",
+                    type: "button",
+                    color: "secondary",
+                    sm: 6,
+                    xs: 2,
+                    sx: {
+                        mx : 1
+                    }
                 },
             ],
             logo: {
@@ -90,7 +106,9 @@ export const placeHolder = [
                 {
                     title: "Career",
                     link: "/",
-                    nestItem: []
+                    nestItem: [
+                        
+                    ]
                 },
             ] 
         },
@@ -131,6 +149,51 @@ export const placeHolder = [
                 subTitle : "image-1",
             }
         ]
+    },
+    {
+        id: 3,
+        componentName: "signup",
+        componentDisplayName: "signup",
+        link: "signup",
+        // user can select email password or confirm password these are the options
+        fields: [
+            {
+                id:1,
+                name: "firstName",
+                placeholder: "Enter first name",
+                label: "First Name", 
+                variant: "outlined",
+                fullWidth: true,
+                required: true,
+                xs: 12,
+                sm: 6,
+            },
+            {
+                id:2,
+                name: "email",
+                placeholder: "Enter your email",
+                label: "email", 
+                variant: "outlined",
+                fullWidth: true,
+                required: true,
+                xs: 12,
+                sm: 6,
+            },
+        ],
+         buttons: [
+            {
+                title: "signUp",
+                type: "submit",
+                color: "primary",
+                variant: "contained",
+                sm: 6,
+                xs: 2,
+                sx: {
+                    mx : 1
+                }
+            },
+        ],
     }
+    
 ];
 

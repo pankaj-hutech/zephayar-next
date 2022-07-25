@@ -2,8 +2,11 @@ import React, { useState } from "react";
 import OneForm from "../component/Forms/OneForm";
 import { useInput } from "../component/Hooks/useInput";
 import axios from "axios";
+import { placeHolder } from "../placeholer";
 
 function Signup() {
+
+    const signUpData = placeHolder[2];
 
     function validateEmail(elementValue){      
         var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
@@ -30,7 +33,7 @@ function Signup() {
 
     } = useInput((value) => value.length >= 8);
 
-
+    
     let inputDetails = [
         {
             id:1,
@@ -56,7 +59,20 @@ function Signup() {
         },
     ];
 
-
+    // signUpData.data.map(element => {
+    //     inputDetails.push({
+    //         id:element.id,
+    //         htmlFor: element.inputName,
+    //         lable: `Enter your ${element.inputName}`,
+    //         inputVal: `${element.inputName}Value`,
+    //         onChange: `${element.inputName}changeHandler`,
+    //         placeholder: `Enter your ${element.inputName}`,
+    //         error: `${element.inputName}hasError`,
+    //         bulrHandler: `${element.inputName}InputBlurHandler`,
+    //         errorMessage: `${element.errorMessage}`,
+    //     })
+    // });
+    // console.log(signUpData)
     let signupFormIsValid = false;
     
     signupFormIsValid = emailIsValid && PasswordIsValid ? true : false;
@@ -75,11 +91,10 @@ function Signup() {
             await axios.post("/api/signup", userSignUpdata)            
             console.log(userSignUpdata);
         } catch (error) {
-            console.log("somting wrong in signup Form" , error);
+            console.log("someting wrong in signup Form" , error);
         }
         emailResetHandler();
         passwordResetHandler();
-        ConfirmPasswordResetHandler();
     }
 
     return (
